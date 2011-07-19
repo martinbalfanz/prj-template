@@ -1,0 +1,23 @@
+.border-radius(@radius) {
+  -moz-border-radius:@radius;
+  -webkit-border-radius:@radius;
+  border-radius:@radius;
+}
+
+.gradient(@from, @to) {
+  background-color: @to;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+  background-image: -webkit-linear-gradient(top, @from, @to);
+  background-image: -moz-linear-gradient(top, @from, @to);
+  background-image: -ms-linear-gradient(top, @from, @to);
+  background-image: -o-linear-gradient(top, @from, @to);
+  background-image: linear-gradient(top, @from, @to);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @from, @to));
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d, endColorstr=%d)", @from, @to);
+}
+
+.text-shadow(@x, @y, @blur, @color) {
+  -moz-text-shadow: @x @y @blur @color;
+  -webkit-text-shadow: @x @y @blur @color;
+  text-shadow: @x @y @blur @color;
+}

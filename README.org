@@ -1,0 +1,7 @@
+contains:
+  - parts of [[http://html5boilerplate.com/][html5boilerplate]]
+  - [[http://jquery.com/][jQuery]]
+  - [[http://lesscss.org/][less.js]]
+  - [[https://github.com/anthracite/grid-ng][grid-ng]]
+  - design debug tools
+  - flask/wsgi-template
