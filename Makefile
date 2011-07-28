@@ -6,6 +6,7 @@ usage:
 	@echo "       make clear  -- clear generated files & backups"
 	@echo "                      => static/css/style.css"
 	@echo "                      => *~"
+	@echo "                      => *#"
 	@echo "                      => .DS_Store"
 
 css:
@@ -17,4 +18,5 @@ css:
 clear:
 	rm -f static/css/style.css
 	find . -iname "*~" -delete
+	find . -iname "*#" -delete
 	find . -iname ".DS_Store" -delete
