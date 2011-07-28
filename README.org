@@ -4,4 +4,5 @@ contains:
   - [[http://lesscss.org/][less.js]]
   - [[https://github.com/anthracite/grid-ng][grid-ng]]
   - design debug tools
-  - flask/wsgi-template
+  - [[http://flask.pocoo.org/][flask]]/wsgi-template
+  - [[http://developer.yahoo.com/yui/compressor/][YUI Compressor]]
