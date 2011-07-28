@@ -11,7 +11,8 @@ usage:
 css:
 	rm -f static/css/style.css
 	mkdir -p static/css
-	lessc -x static/less/layout.less > static/css/style.css
+	lessc static/less/layout.less > static/css/style.css
+	java -jar bin/yuicompressor-2.4.6.jar --type css --charset utf-8 -o static/css/style.css static/css/style.css
 
 clear:
 	rm -f static/css/style.css
