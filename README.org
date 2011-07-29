@@ -5,4 +5,5 @@ contains:
   - [[https://github.com/anthracite/grid-ng][grid-ng]]
   - design debug tools
   - [[http://flask.pocoo.org/][flask]]/wsgi-template
+  - [[http://packages.python.org/Frozen-Flask/][Frozen-Flask]]
   - [[http://developer.yahoo.com/yui/compressor/][YUI Compressor]]
