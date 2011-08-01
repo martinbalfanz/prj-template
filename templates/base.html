@@ -22,12 +22,12 @@
 
   <!-- CSS: implied media="all" -->
   {% if debug %}
-  <link rel="stylesheet" type="text/less" href="static/less/layout.less">
-  <script src="static/js/lib/less-1.1.4.min.js"></script>
+  <link rel="stylesheet" type="text/less" href="{{ url_for('static', filename='less/layout.less') }}">
+  <script src="{{ url_for('static', filename='js/lib/less-1.1.4.min.js') }}"></script>
   {% else %}
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   {% endif %}
-  <script src="static/js/lib/modernizr.min.js"></script>
+  <script src="{{ url_for('static', filename='js/lib/modernizr.min.js') }}"></script>
 
   <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
 </head>
@@ -51,7 +51,7 @@
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="static/js/lib/jquery-1.6.2.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/lib/jquery-1.6.2.min.js') }}"><\/script>')</script>
 
 
   <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID
