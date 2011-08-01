@@ -32,7 +32,7 @@
   <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
 </head>
 
-<body id="{{ page_id }}">
+<body{% if page_id %} id="{{ page_id }}"{% endif %}>
 
   <div id="container">
     <header>
