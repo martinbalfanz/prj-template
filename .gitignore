@@ -1,4 +1,7 @@
 *~
 *#
+*.pyc
 .DS_Store
+static/css/style.css
+build
 env
