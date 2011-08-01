@@ -73,5 +73,18 @@
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
   
+  {% if config.DEBUG %}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/debug.js') }}"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    debugTools.init();
+    //toggle('debug-grid');
+    
+    /* less debug mode */
+    less.env = "development";
+    // less.watch();
+    });
+  </script>
+  {% endif %}
 </body>
 </html>
