@@ -10,4 +10,4 @@ app.config.update(
 
 if __name__ == '__main__':
     freezer.freeze()
-    freezer.serve()
+    # freezer.serve()
