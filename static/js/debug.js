@@ -259,6 +259,7 @@ function debugTools() {
       }
     };
   };
-}
+};
 
 var debugTools = new debugTools();
+debugTools.init();

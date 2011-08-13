@@ -1,8 +1,9 @@
 # GNU Make rules for various tasks
 
 usage:
-	@echo "usage: make css    -- generate css file from less sources"
-	@echo "                      => needs node.js & less module installed"
+	@echo "usage: make run    -- run testing environment"
+	@echo "       make css    -- generate css file from scss sources"
+	@echo "                      => needs scss gem intalled"
 	@echo "       make build  -- create static files and cleanup"
 	@echo "                      => needs to be executed from within virtualenv"
 	@echo "       make clear  -- clear generated files & backups"
@@ -11,17 +12,19 @@ usage:
 	@echo "                      => *#"
 	@echo "                      => .DS_Store"
 
+run:
+	foreman start
+
 css:
 	rm -f static/css/style.css
 	mkdir -p static/css
-	lessc static/less/layout.less > static/css/style.css
+	sass --scss -E utf-8 static/scss/layout.scss:static/css/style.css
 	java -jar bin/yuicompressor-2.4.6.jar --type css --charset utf-8 -o static/css/style.css static/css/style.css
 
 build:clear css
 	python freeze.py
 	rm -f build/static/js/debug.js
-	rm -f build/static/js/lib/less*.js
-	rm -rf build/static/less
+	rm -rf build/static/scss
 
 clear:
 	rm -rf build/

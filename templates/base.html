@@ -21,12 +21,8 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <!-- CSS: implied media="all" -->
-  {% if config.DEBUG %}
-  <link rel="stylesheet" type="text/less" href="{{ url_for('static', filename='less/layout.less') }}">
-  <script src="{{ url_for('static', filename='js/lib/less-1.1.4.min.js') }}"></script>
-  {% else %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  {% endif %}
+
   <script src="{{ url_for('static', filename='js/lib/modernizr.min.js') }}"></script>
 
   <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
@@ -69,16 +65,6 @@
 
   {% if config.DEBUG %}
   <script type="text/javascript" src="{{ url_for('static', filename='js/debug.js') }}"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-    debugTools.init();
-    //toggle('debug-grid');
-
-    /* less debug mode */
-    less.env = "development";
-    // less.watch();
-    });
-  </script>
   {% endif %}
 </body>
 </html>

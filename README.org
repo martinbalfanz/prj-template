@@ -1,9 +1,9 @@
 contains:
   - parts of [[http://html5boilerplate.com/][html5boilerplate]]
   - [[http://jquery.com/][jQuery]]
-  - [[http://lesscss.org/][less.js]]
-  - [[https://github.com/anthracite/grid-ng][grid-ng]]
+  - [[http://sass-lang.com/][scss]]
   - design debug tools
   - [[http://flask.pocoo.org/][flask]]/wsgi-template
   - [[http://packages.python.org/Frozen-Flask/][Frozen-Flask]]
   - [[http://developer.yahoo.com/yui/compressor/][YUI Compressor]]
+# - [[https://github.com/anthracite/grid-ng][grid-ng]]
