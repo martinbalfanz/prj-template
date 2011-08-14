@@ -7,3 +7,4 @@ contains:
   - [[http://packages.python.org/Frozen-Flask/][Frozen-Flask]]
   - [[http://developer.yahoo.com/yui/compressor/][YUI Compressor]]
 # - [[https://github.com/anthracite/grid-ng][grid-ng]]
+# requires: sass, foreman

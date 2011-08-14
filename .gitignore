@@ -2,7 +2,7 @@
 *#
 *.pyc
 .DS_Store
-static/css/style.css
+static/css
 build
 env
 .sass-cache

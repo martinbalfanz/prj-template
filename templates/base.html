@@ -21,7 +21,11 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <!-- CSS: implied media="all" -->
+  {% if config.DEBUG %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+  {% else %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% endif %}
 
   <script src="{{ url_for('static', filename='js/lib/modernizr.min.js') }}"></script>
 
