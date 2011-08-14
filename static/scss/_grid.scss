@@ -1,0 +1,54 @@
+/*
+  grid-ng port to scss (testing)
+  ====================
+
+  ~ Martin Balfanz (https://github.com/anthracite)
+*/
+
+/* initial variables */
+
+$columns: 24;
+$column-width: 30px;
+$gutter-width: 10px;
+
+body {
+  min-width: $columns * ($column-width + $gutter-width) - $gutter-width;
+}
+
+@mixin content {
+  width: $columns * ($column-width + $gutter-width) - $gutter-width;
+  margin: 0 auto;
+}
+
+@mixin column($cols:1, $margin-right:$gutter-width, $padding-left:0, $padding-right:0) {
+  width: $cols * ($column-width + $gutter-width)
+         - $gutter-width - $padding-left - $padding-right;
+  float: left;
+
+  /* margin-right */
+  @if $margin-right != 0 {
+    @if unitless($margin-right) {
+      @warn "Assuming #{$margin-right} to be in pixels";
+      $margin-left: 1px * $margin-left;
+    }
+    margin-right: $margin-right;
+  }
+
+  /* padding-left */
+  @if $padding-left != 0 {
+    @if unitless($padding-left) {
+      @warn "Assuming #{$padding-left} to be in pixels";
+      $padding-left: 1px * $padding-left;
+    }
+    padding-left: $padding-left;
+  }
+
+  /* padding-right */
+  @if $padding-right != 0 {
+    @if unitless($padding-right) {
+      @warn "Assuming #{$padding-right} to be in pixels";
+      $padding-right: 1px * $padding-right;
+    }
+    padding-right: $padding-right;
+  }
+}
