@@ -1,4 +1,4 @@
-from flaskext.frozen import Freezer
+from flask_frozen import Freezer
 from prj import app
 
 freezer = Freezer(app)
