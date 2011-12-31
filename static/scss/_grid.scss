@@ -29,7 +29,7 @@ body {
   @if $margin-right != 0 {
     @if unitless($margin-right) {
       @warn "Assuming #{$margin-right} to be in pixels";
-      $margin-left: 1px * $margin-left;
+      $margin-right: 1px * $margin-right;
     }
     margin-right: $margin-right;
   }
